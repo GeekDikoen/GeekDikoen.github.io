@@ -1,279 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  <title>Honey的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于配置ssh key配置的重要问题在我的上上篇文章中，第五步，红框中的代码1git config --global user.name &quot;你的用户名&quot;中，是把引号里的字去掉，改为你自己的GitHub用户名，而不是将user.name换掉😂">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Honey的博客">
-<meta property="og:url" content="http://example.com/2021/08/20/%E5%85%B3%E4%BA%8E%E9%85%8D%E7%BD%AEssh%20key%E9%85%8D%E7%BD%AE%E7%9A%84%E9%87%8D%E8%A6%81%E9%97%AE%E9%A2%98/index.html">
-<meta property="og:site_name" content="Honey的博客">
-<meta property="og:description" content="关于配置ssh key配置的重要问题在我的上上篇文章中，第五步，红框中的代码1git config --global user.name &quot;你的用户名&quot;中，是把引号里的字去掉，改为你自己的GitHub用户名，而不是将user.name换掉😂">
-<meta property="og:locale">
-<meta property="article:published_time" content="2021-08-20T14:13:56.189Z">
-<meta property="article:modified_time" content="2021-08-20T14:13:56.190Z">
-<meta property="article:author" content="E-Dikoen">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Honey的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Honey的博客 - from E-Dikoen</title>
+    
+      <link rel="icon" href="/img/favicon.ico">
+    
+    <meta name="keyword"  content="">
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/plugin/bganimation/bg.css">
-
-  
-
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" rel="stylesheet" type="text/css">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <div class="widget-wrap mobile-header">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://pic.wodingche.com/carimg/oepeoojz.jpeg">
-    <h2 class="author">E-Dikoen</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+  <div class="loading-wrapper">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
   </div>
+  <div class="page">
+    <div class="head">
+      <header class="head-header">
+  <h1 class="head-authorH">
+    <a href="/" class="head-authorLink">
+      Honey的博客</a>
+  </h1>
+  <div class="head-right">
+    <!-- <div class="head-search">
+      <input class="head-searchK"></input>
+      <span class="head-searchT">
+        </span>
+    </div> -->
+    <button class="barWrap" id="barWrap-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="head-about" id="head-about">
+      
+      <a class="head-aboutLink" href="/about">
+        关于</a>
+      
+    </div>
+  </div>
+</header>
+    </div>
+    <div class="main">
+      <div class="barShow-head" id="barShow">
+  <ul class="barShow-ul">
+    
+      <li class="barShow-item">
+        <a href="/archives"><span>
+            Archives</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/posts1"><span>
+            Posts1</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/categories/your-link"><span>
+            Posts2</span></a>
+      </li>
+    
+      <li class="barShow-item">
+        <a href="/tags"><span>
+            Tags</span></a>
+      </li>
+    
+  </ul>
 </div>
-
-        <section id="main"><article id="post-关于配置ssh key配置的重要问题" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/08/20/%E5%85%B3%E4%BA%8E%E9%85%8D%E7%BD%AEssh%20key%E9%85%8D%E7%BD%AE%E7%9A%84%E9%87%8D%E8%A6%81%E9%97%AE%E9%A2%98/" class="article-date">
-  <time class="post-time" datetime="2021-08-20T14:13:56.189Z" itemprop="datePublished">
-    <span class="post-month">8月</span><br/>
-    <span class="post-day">20</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="关于配置ssh-key配置的重要问题"><a href="#关于配置ssh-key配置的重要问题" class="headerlink" title="关于配置ssh key配置的重要问题"></a>关于配置ssh key配置的重要问题</h1><p>在我的上上篇文章中，第五步，红框中的代码1<code>git config --global user.name &quot;你的用户名&quot;</code>中，是把<strong>引号里的</strong>字去掉，改为你自己的GitHub用户名，而不是将<code>user.name</code>换掉😂</p>
-
+      <article class="post" id="post">
+  <header class="post-head">
+    <h1 class="post-title">
+      <a class="title" href="/2021/08/20/%E5%85%B3%E4%BA%8E%E9%85%8D%E7%BD%AEssh%20key%E9%85%8D%E7%BD%AE%E7%9A%84%E9%87%8D%E8%A6%81%E9%97%AE%E9%A2%98/">
+        ssh key配置的重要问题
+      </a>
+    </h1>
+  </header>
+  <div class="post-datetag">
+    <div class="post-date">
+      <time class="post-time" title="2021-08-20 22:13:56" datetime="2021-08-20T14:13:56.189Z" itemprop="datePublished">
+  2021-08-20</time>
+    </div>
+    <div class="post-tag">
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/08/20/%E5%85%B3%E4%BA%8E%E9%85%8D%E7%BD%AEssh%20key%E9%85%8D%E7%BD%AE%E7%9A%84%E9%87%8D%E8%A6%81%E9%97%AE%E9%A2%98/" data-id="ckskfotuk0000z0va2typbtur" class="article-share-link">Share</a>
-      
-      
-    </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2021/08/15/%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
 
   
+    <div class="post-cc">
+      版权声明：
+        
+          署名-非商业性使用-相同方式共享 | <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a>
+        
+    </div>
+  
+
+  <div class="article-entry" itemprop="articleBody">
+    <h1 id="关于配置ssh-key配置的重要问题"><a href="#关于配置ssh-key配置的重要问题" class="headerlink" title="关于配置ssh key配置的重要问题"></a>关于配置ssh key配置的重要问题</h1><p>在我的上上篇文章中，第五步，红框中的代码1<code>git config --global user.name &quot;你的用户名&quot;</code>中，是把<strong>引号里的</strong>字去掉，改为你自己的GitHub用户名，而不是将<code>user.name</code>换掉😂</p>
+
+  </div>
 </article>
 
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <h1 class="blog-title">Honey的博客</h1>
-    <h2 class="blog-subtitle">from E-Dikoen</h2>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
-  </div>
-</div>
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://pic.wodingche.com/carimg/oepeoojz.jpeg">
-    <h2 class="author">E-Dikoen</h2>
-    <h3 class="description"></h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%85%B3%E4%BA%8E%E9%85%8D%E7%BD%AEssh-key%E9%85%8D%E7%BD%AE%E7%9A%84%E9%87%8D%E8%A6%81%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.</span> <span class="post-toc-text">关于配置ssh key配置的重要问题</span></a></li></ol>
+        </nav>
+    </aside>
+   
     </div>
-
-
-
-    <div class="social-link">
-      
-        <a class="hvr-bounce-in" href="http://" target="_blank" title="ElodgieDikoen">
-          ElodgieDikoen
-        </a>
-      
-    </div>
-
-    <div class="friend-link">
-      <h2>友情链接</h2>
-      
-        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
-          ShanaMaid
-        </a>
-      
-    </div>
-  </div>
-</div>
-
+    <footer class="footer-nav">
+      <div class="footer">
+        <span class="footer-msg">
   
-</aside>
-        
+    <div class="icp">
+      <img src="/img/icp.png">
+      <a href="https://beian.miit.gov.cn/" class="icp-text" target="_blank">
+        京ICP备2021005293号
+      </a>
+    </div>
+  
+  2020
+  
+  
+    <span class="timeDivide">-</span>
+    2021
+  
+  E-Dikoen.&nbsp;
+  Power by
+  <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+  and
+  <a class="orangelink" href="https://github.com/" target="_blank" rel="">
+    hexo-theme-yuzu</a>
+</span>
+
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy;2020 - 2021 E-Dikoen<br>
-      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
-      主题-<a target="_blank" rel="noopener" href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      
-    </div>
-    
-  </div>
-</footer>
+    </footer>
+    <div class="back-top" id="back-top">
+      <i class="back-top-icon"></i>
     </div>
     
 
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
-<script>
-new WOW().init();
-</script>   
+  <script src="/js/jquery/jquery-3.1.1.min.js"></script>
 
+    
+<script src="/js/theme.js"></script>
 
-  
-<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-
-  
-<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-  
-<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
-
-  
-<script src="/plugin/galmenu/GalMenu.js"></script>
-
-  <div class="GalMenu GalDropDown">
-      <div class="circle" id="gal">
-        <div class="ring">
-          
-            <a href="/" title="" class="menuItem">首页</a>
-          
-            <a href="/tags" title="" class="menuItem">标签</a>
-          
-            <a href="/categories" title="" class="menuItem">分类</a>
-          
-            <a href="/archives" title="" class="menuItem">归档</a>
-          
-            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
-          
-            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
-          
-        </div>
-        
-          <audio id="audio" src="plugin/galmenu/wulusai.mp3"></audio>
-        
-      </div> 
-</div>
-<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
-  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-    l = items.length; i < l; i++) {
-      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
-    }</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('body').GalMenu({
-      'menu': 'GalDropDown'
-    })
-  });
-</script>
-
-  <section class="hidden-xs"> 
-  <ul class="cb-slideshow"> 
-    <li><span>苟利</span></li> 
-    <li><span>国家</span></li> 
-    <li><span>生死以</span></li> 
-    <li><span>岂能</span></li> 
-    <li><span>祸福</span></li> 
-    <li><span>趋避之</span></li> 
-  </ul>
-</section>
-
-<script src="/js/script.js"></script>
-
-
+    
+<script src="/js/index.js"></script>
 
 
   </div>
 </body>
-</html>
